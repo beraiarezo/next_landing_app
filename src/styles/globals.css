@@ -1,19 +1,22 @@
+@font-face {
+  font-family: "Nino";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../public//fonts/bpg_nino_mtavruli_bold.ttf) format("truetype");
+}
+
+:root {
+  --font-nino: "Nino", sans-serif;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.slick-next:before,
+.slick-prev:before {
+  display: none;
 }
 
 body {
@@ -30,4 +33,11 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+/* CUSTOM */
+
+.slick-prev,
+.slick-next {
+  top: unset !important;
 }
