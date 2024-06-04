@@ -24,7 +24,7 @@ export default function Carousel() {
         >
           <div className="absolute sm:top-80 top-20 w-full">
             <div className="absolute w-full h-full bg-sky-700/70"></div>
-            <h1 className="font-nino md:text-4xl text-2xl text-center text-neutral-100 relative p-5 w-3/4 m-auto leading-relaxed">
+            <h1 className=" md:text-4xl text-2xl text-center text-neutral-100 relative p-5 w-3/4 m-auto leading-relaxed">
               უზრუნველყოფს შესანიშნავი ბეტონის ღობეების და ქვისა კედლების
               სისტემებს 33 წელზე მეტი ხნის განმავლობაში
             </h1>
@@ -79,7 +79,7 @@ function NextArrow(props: any) {
   const { className, style, onClick } = props;
   return (
     <div
-      className={`${className} shadow-md hover:shadow-lg`}
+      className={`shadow-md hover:shadow-lg ${className} `}
       style={{
         ...style,
         display: "block",

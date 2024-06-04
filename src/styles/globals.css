@@ -6,8 +6,17 @@
   src: url(../../public//fonts/bpg_nino_mtavruli_bold.ttf) format("truetype");
 }
 
+@font-face {
+  font-family: "Glaho";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../../public//fonts/bpg_glaho.ttf) format("truetype");
+}
+
 :root {
   --font-nino: "Nino", sans-serif;
+  --font-glaho: "Glaho", sans-serif;
 }
 
 @tailwind base;
@@ -40,4 +49,37 @@ body {
 .slick-prev,
 .slick-next {
   top: unset !important;
+}
+
+.slick-dots {
+  bottom: 100px !important;
+}
+
+.slick-dots li {
+  margin-right: 20px !important;
+}
+
+.slick-dots .slick-active {
+  border-color: #8000ff !important;
+}
+
+.slick-dots li button {
+  width: 25px !important;
+  height: 25px !important;
+  border-radius: 50% !important;
+  border: 2px solid #8000ff !important;
+  background-color: #facc15 !important;
+  position: relative !important;
+}
+
+.slick-dots li button:before {
+  width: 10px !important;
+  height: 10px !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  background-color: #8000ff !important;
+  border-radius: 50%;
+  content: " " !important;
 }

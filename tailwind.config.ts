@@ -15,6 +15,13 @@ const config: Config = {
       },
       fontFamily: {
         nino: ["var(--font-nino)"],
+        glaho: ["var(--font-glaho)"],
+      },
+      colors: {
+        "c-white": "#fff",
+        "c-yellow": "#facc15",
+        "c-gray": "#dddddd",
+        "c-purple": "#8000FF",
       },
     },
   },
