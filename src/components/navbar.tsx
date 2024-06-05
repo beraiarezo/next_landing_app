@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 import LogoSvg from "../../public/icons/logo.svg";
 
@@ -26,16 +27,18 @@ const navlist = [
 interface NavlinkProps {
   title: string;
   path: string;
+  isActive: boolean;
 }
 
-const Navlink = ({ title, path }: NavlinkProps) => {
-  console.log("---");
+const Navlink = ({ title, path, isActive }: NavlinkProps) => {
   return (
     <li>
       <Link
         href={path}
-        className=" hover:bg-c-yellow font-nino block bg-transparent py-2 px-3 text-white bg-c-yellow text-xl rounded md:bg-transparent "
-        // aria-current="page"
+        className={` font-nino block py-2 px-3  text-xl rounded  ${
+          isActive ? "bg-c-yellow text-c-purple	" : "text-white"
+        } hover:bg-c-yellow`}
+        aria-current="page"
       >
         {title}
       </Link>
@@ -43,24 +46,13 @@ const Navlink = ({ title, path }: NavlinkProps) => {
   );
 };
 
-const CustomImage = ({ src, alt, fetchPriority, ...props }: any) => {
-  return <img src={src} alt={alt} fetchpriority={fetchPriority} {...props} />;
-};
-
 export default function Navbar() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  console.log(isOpen, "isOpen");
   return (
     <header className="fixed w-full h-20 top-0 z-10 flex-1">
       <nav className="border-gray-200 dark:bg-gray-900">
-        <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-          <Link
-            href="/"
-            className="flex items-center space-x-3 rtl:space-x-reverse"
-          >
-            {/* browser console logs error here */}
-            <Image src={LogoSvg} alt="ბეტონის ღობე" className=" w-12" />
-          </Link>
+        <div className="max-w-screen-xl flex flex-wrap items-center justify-center mx-auto p-4">
           <button
             onClick={() => setIsOpen(!isOpen)}
             // data-collapse-toggle="navbar-default"
@@ -94,7 +86,12 @@ export default function Navbar() {
           >
             <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 bg-slate-400	sm:bg-transparent md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 ">
               {navlist.map((nav, index) => (
-                <Navlink title={nav.title} path={nav.path} key={index} />
+                <Navlink
+                  title={nav.title}
+                  path={nav.path}
+                  key={index}
+                  isActive={pathname === nav.path}
+                />
               ))}
             </ul>
           </div>

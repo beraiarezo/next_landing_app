@@ -22,7 +22,7 @@ export default function Carousel() {
           className="w-screen h-screen"
           style={{ backgroundImage: "url(/images/slide-1.jpg)" }}
         >
-          <div className="absolute sm:top-80 top-20 w-full">
+          <div className="absolute sm:top-80 w-full" style={{ top: "40%" }}>
             <div className="absolute w-full h-full bg-sky-700/70"></div>
             <h1 className=" md:text-4xl text-2xl text-center text-neutral-100 relative p-5 w-3/4 m-auto leading-relaxed">
               უზრუნველყოფს შესანიშნავი ბეტონის ღობეების და ქვისა კედლების
@@ -36,7 +36,7 @@ export default function Carousel() {
           className="w-screen h-screen"
           style={{ backgroundImage: "url(/images/slide-2.jpg)" }}
         >
-          <div className="absolute top-1/3 w-full">
+          <div className="absolute w-full" style={{ top: "40%" }}>
             <div className="absolute w-full h-full bg-sky-700/70"></div>
             <h1 className="font-nino text-4xl text-center text-neutral-100 relative p-5 w-3/4 m-auto leading-relaxed">
               ემსახურება კომერციულ, საცხოვრებელ, სამთავრობო და არქიტექტურულ
@@ -50,7 +50,7 @@ export default function Carousel() {
           className="w-screen h-screen"
           style={{ backgroundImage: "url(/images/slide-3.jpg)" }}
         >
-          <div className="absolute top-1/3 w-full">
+          <div className="absolute w-full" style={{ top: "40%" }}>
             <div className="absolute w-full h-full bg-sky-700/70"></div>
             <h1 className="font-nino text-4xl text-center text-neutral-100 relative p-5 w-3/4 m-auto leading-relaxed">
               ჩვენ ვასრულებთ ყველა საწარმოო და სამონტაჟო პროცესს.
@@ -63,7 +63,7 @@ export default function Carousel() {
           className="w-screen h-screen"
           style={{ backgroundImage: "url(/images/slide-3.jpg)" }}
         >
-          <div className="absolute top-1/3 w-full">
+          <div className="absolute w-full" style={{ top: "40%" }}>
             <div className="absolute w-full h-full bg-sky-700/70"></div>
             <h1 className="font-nino text-4xl text-center text-neutral-100 relative p-5 w-3/4 m-auto leading-relaxed">
               ვუზრუნველვყოფთ უმაღლესი ხარისხის მასალებს და სამუშაოს
