@@ -8,7 +8,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <>
-      <motion.div style={{ scaleX: scrollYProgress }} id="olaa"></motion.div>{" "}
+      <motion.div style={{ scaleX: scrollYProgress }} id="olaa"></motion.div>
       <Layout>
         <Component {...pageProps} />
       </Layout>
