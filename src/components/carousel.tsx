@@ -65,7 +65,7 @@ function NextArrow(props: any) {
       }}
       onClick={onClick}
     >
-      <img src={leftArr.src} className="rounded" />
+      <img src={rightArr.src} className="rounded" />
     </div>
   );
 }
@@ -82,7 +82,7 @@ function PrevArrow(props: any) {
       }}
       onClick={onClick}
     >
-      <img src={rightArr.src} className="rounded" />
+      <img src={leftArr.src} className="rounded" />
     </div>
   );
 }
