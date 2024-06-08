@@ -30,7 +30,7 @@ export default function Carousel() {
     speed: 300,
     slidesToShow: 1,
     slidesToScroll: 1,
-    // nextArrow: <NextArrow />,
+    nextArrow: <NextArrow />,
     // prevArrow: <PrevArrow />,
   };
   return (
