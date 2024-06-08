@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -65,7 +66,13 @@ function NextArrow(props: any) {
       }}
       onClick={onClick}
     >
-      <img src={leftArr.src} className="rounded" />
+      <Image
+        src={rightArr.src}
+        className="rounded"
+        alt="a"
+        width={70}
+        height={70}
+      />
     </div>
   );
 }
@@ -82,7 +89,7 @@ function PrevArrow(props: any) {
       }}
       onClick={onClick}
     >
-      <img src={leftArr.src} className="rounded" />
+      <Image src={leftArr.src} className="rounded" alt="left arrow" />
     </div>
   );
 }
