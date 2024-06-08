@@ -1,9 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/router";
-
-import LogoSvg from "../../public/icons/logo.svg";
 
 const routes = [
   {
@@ -62,7 +59,7 @@ export default function Navbar() {
             className="flex items-center space-x-3 rtl:space-x-reverse"
           >
             {/* browser console logs error here */}
-            <Image src={LogoSvg} alt="ბეტონის ღობე" className=" w-12" />
+            {/* <Image src={LogoSvg} alt="ბეტონის ღობე" className=" w-12" /> */}
           </Link>
           <button
             onClick={() => setIsOpen(!isOpen)}

@@ -45,6 +45,7 @@ const Product = ({ src, title }: any) => {
           <img
             src={src}
             className="transition-transform duration-300 group-hover:scale-110 w-full"
+            alt={title}
           />
         </div>
       </div>

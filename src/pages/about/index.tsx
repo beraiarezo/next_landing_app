@@ -4,7 +4,14 @@ import Cover2 from "../../../public/images/222.jpg";
 
 import Cover from "@/components/cover";
 
-export default function about() {
+export async function getStaticProps() {
+  console.log("SSR: getServerSideProps called");
+  return {
+    props: { data: 1 },
+  };
+}
+
+export default function about({ data }: any) {
   return (
     <section>
       <Cover imgSrc={CoverImg.src} title="ჩვენ შესახებ" />
