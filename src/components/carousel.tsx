@@ -2,6 +2,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import leftArr from "../../public/icons/left-arrow.svg";
+import rightArr from "../../public/icons/right-arrow.svg";
+
 const Slides = [
   {
     title:
@@ -62,7 +65,7 @@ function NextArrow(props: any) {
       }}
       onClick={onClick}
     >
-      <img src="/icons/right-arrow.svg" className="rounded" />
+      <img src={leftArr.src} className="rounded" />
     </div>
   );
 }
@@ -79,7 +82,7 @@ function PrevArrow(props: any) {
       }}
       onClick={onClick}
     >
-      <img src="/icons/left-arrow.svg" className="rounded" />
+      <img src={rightArr.src} className="rounded" />
     </div>
   );
 }
